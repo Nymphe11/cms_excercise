@@ -11,6 +11,7 @@ import TransactionsDetail from './pages/transaction/TransactionsDetail';
 import MyPrivileges from './pages/accounts/MyPrivileges';
 import Notice from './pages/Notice';
 import NoticeDetail from './pages/NoticeDetail';
+import UserTrafficSources from './pages/UserTrafficSources';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="/content/banner" element={<Banner />} />
           <Route path="/content/banner/:id" element={<BannerDetail />} />
+          <Route path="/usertrafficsources" element={<UserTrafficSources />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/transactions/:id" element={<TransactionsDetail />} />
           <Route path="/accounts/myprivileges" element={<MyPrivileges />} />
