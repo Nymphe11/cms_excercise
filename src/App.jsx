@@ -15,6 +15,7 @@ import UserTrafficSources from './pages/UserTrafficSources';
 import { Content } from 'antd/es/layout/layout';
 import ContentPerformance from './pages/ContentPerformance';
 import MediaManagement from './pages/MediaManagement';
+import RecentActivity from './pages/RecentActivity';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contentperformance" element={<ContentPerformance />} />
           <Route path="/usertrafficsources" element={<UserTrafficSources />} />
           <Route path="/mediamanagement" element={<MediaManagement />} />
+          <Route path="/recentactivity" element={<RecentActivity />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/transactions/:id" element={<TransactionsDetail />} />
           <Route path="/accounts/myprivileges" element={<MyPrivileges />} />

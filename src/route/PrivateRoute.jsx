@@ -9,6 +9,7 @@ import {
   PlayCircleOutlined,
   SettingOutlined,
   SnippetsOutlined,
+  SolutionOutlined,
   TransactionOutlined,
   UserOutlined,
 } from '@ant-design/icons';
@@ -49,6 +50,7 @@ const items = [
   getItem('콘텐츠 성과 지표', 'contentperformance', <BarChartOutlined />),
   getItem('사용자 유입경로', 'usertrafficsources', <LineChartOutlined />),
   getItem('미디어 관리', 'mediamanagement', <PlayCircleOutlined />),
+  getItem('최근 활동 내역', 'recentactivity', <SolutionOutlined />),
   getItem('결제 관리', 'transactions', <TransactionOutlined />),
   getItem('카드 관리', 'creditcards', <CreditCardOutlined />),
   getItem('공지사항 관리', 'notice', <SnippetsOutlined />),
