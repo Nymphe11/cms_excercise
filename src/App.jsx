@@ -16,6 +16,7 @@ import { Content } from 'antd/es/layout/layout';
 import ContentPerformance from './pages/ContentPerformance';
 import MediaManagement from './pages/MediaManagement';
 import RecentActivity from './pages/RecentActivity';
+import MassageManager from './pages/MassageManager';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/recentactivity" element={<RecentActivity />} />
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/transactions/:id" element={<TransactionsDetail />} />
+          <Route path="/massagemanager" element={<MassageManager />} />
           <Route path="/accounts/myprivileges" element={<MyPrivileges />} />
           <Route path="/notice" element={<Notice />} />
           <Route path="/notice/:id" element={<NoticeDetail />} />

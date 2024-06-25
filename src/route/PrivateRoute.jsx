@@ -7,6 +7,7 @@ import {
   LoginOutlined,
   NotificationOutlined,
   PlayCircleOutlined,
+  SendOutlined,
   SettingOutlined,
   SnippetsOutlined,
   SolutionOutlined,
@@ -54,6 +55,7 @@ const items = [
   getItem('결제 관리', 'transactions', <TransactionOutlined />),
   getItem('카드 관리', 'creditcards', <CreditCardOutlined />),
   getItem('공지사항 관리', 'notice', <SnippetsOutlined />),
+  getItem('알림 및 메세지 발송', 'massagemanager', <SendOutlined />),
   getItem('계정 관리', 'accounts', <UserOutlined />, [
     getItem('권한', 'myprivileges'),
     getItem('설정', 'settings'),
