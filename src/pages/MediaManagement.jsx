@@ -9,7 +9,7 @@ const MediaManagement = () => {
       <PageTitle title="미디어 관리" desc="미디어 관리를 하는 페이지 입니다." />
       <div style={{ margin: 40 }}>
         <Image
-          src="/src/assets/modernvilla.jpeg"
+          src="/src/assets/cityview.jpg"
           style={{ width: '50rem', height: '25rem', marginBottom: 40 }}
         />
         <ProgressBar
