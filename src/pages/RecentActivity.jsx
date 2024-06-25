@@ -1,3 +1,4 @@
+import Search from 'antd/es/transfer/search';
 import PageTitle from '../components/PageTitle';
 import { profileImages } from '../components/ProfileImg';
 import {
@@ -9,10 +10,11 @@ import {
   Tab,
   Image,
 } from 'react-bootstrap';
+import { useState } from 'react';
 
 const userData = [
   {
-    name: '사용자 1',
+    name: '사용자1',
     age: 24,
     address: '서울시 강남구',
     email: 'a@a.a',
@@ -20,7 +22,7 @@ const userData = [
     eventKey: '#link1',
   },
   {
-    name: '사용자 2',
+    name: '사용자2',
     age: 41,
     address: '경기도 성남시',
     email: 'b@b.b',
@@ -30,17 +32,34 @@ const userData = [
 ];
 
 const RecentActivity = () => {
+  const [searchTerm, serSearchTerm] = useState('');
+
+  const filteredUserData = userData.filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleSearch = (e) => {
+    serSearchTerm(e.target.value);
+  };
+
   return (
     <article>
       <PageTitle
         title="최근 활동 내역"
         desc="사용자의 최근 활동 내역을 볼 수 있는 페이지 입니다."
       />
+      <div style={{ paddingBottom: 30 }}>
+        <Search
+          placeholder="사용자명 검색"
+          value={searchTerm}
+          onChange={handleSearch}
+        />
+      </div>
       <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
         <Row>
           <Col sm={4}>
             <ListGroup>
-              {userData.map((item, index) => (
+              {filteredUserData.map((item, index) => (
                 <ListGroup.Item action href={item.eventKey} key={index}>
                   {item.name}
                 </ListGroup.Item>
@@ -49,7 +68,7 @@ const RecentActivity = () => {
           </Col>
           <Col sm={8}>
             <Tab.Content>
-              {userData.map((item, index) => (
+              {filteredUserData.map((item, index) => (
                 <Tab.Pane eventKey={item.eventKey} key={index}>
                   <Table striped bordered hover>
                     <tbody>

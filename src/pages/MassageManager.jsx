@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import { Form } from 'react-bootstrap';
+import { DatePicker, Space, ConfigProvider } from 'antd';
+import locale from 'antd/locale/ko_KR';
 
 const sendData = [
   { label: '이메일로 수신' },
@@ -15,7 +17,11 @@ const MassageManager = () => {
         title="알림 및 메세지"
         desc="알림 및 메세지를 발송하는 페이지 입니다."
       />
-      <div>
+      <ConfigProvider locale={locale}>
+        <DatePicker />
+      </ConfigProvider>
+
+      <div style={{ paddingTop: 30 }}>
         {sendData.map((item) => (
           <Form.Check type="radio" label={item.label} aria-label="radio 1" />
         ))}
