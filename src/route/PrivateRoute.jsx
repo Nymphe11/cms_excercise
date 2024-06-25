@@ -1,4 +1,5 @@
 import {
+  BarChartOutlined,
   BookOutlined,
   CreditCardOutlined,
   HomeOutlined,
@@ -44,6 +45,7 @@ const items = [
     getItem('배너', 'banner'),
     getItem('팝업', 'popup'),
   ]),
+  getItem('콘텐츠 성과 지표', 'contentperformance', <BarChartOutlined />),
   getItem('사용자 유입경로', 'usertrafficsources', <LineChartOutlined />),
   getItem('결제 관리', 'transactions', <TransactionOutlined />),
   getItem('카드 관리', 'creditcards', <CreditCardOutlined />),
