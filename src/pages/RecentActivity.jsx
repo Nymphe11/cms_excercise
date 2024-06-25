@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 const userData = [
   {
-    name: '사용자1',
+    name: '박서윤',
     age: 24,
     address: '서울시 강남구',
     email: 'a@a.a',
@@ -22,12 +22,36 @@ const userData = [
     eventKey: '#link1',
   },
   {
-    name: '사용자2',
+    name: '홍지원',
     age: 41,
     address: '경기도 성남시',
     email: 'b@b.b',
     profileImg: profileImages.user2,
     eventKey: '#link2',
+  },
+  {
+    name: '최준혁',
+    age: 33,
+    address: '대구시 달서구',
+    email: 'c@c.c',
+    profileImg: profileImages.user3,
+    eventKey: '#link3',
+  },
+  {
+    name: '송태현',
+    age: 25,
+    address: '전주시 완산구',
+    email: 'd@d.d',
+    profileImg: profileImages.user4,
+    eventKey: '#link4',
+  },
+  {
+    name: '김하늘',
+    age: 19,
+    address: '울산광역시 울주군',
+    email: 'e@e.e',
+    profileImg: profileImages.user5,
+    eventKey: '#link5',
   },
 ];
 
