@@ -2,11 +2,8 @@ import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import { Form } from 'react-bootstrap';
 import { DatePicker } from 'antd';
-import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
-
-dayjs.locale('ko');
 
 const sendData = [
   { label: '이메일로 수신' },
