@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import { Form } from 'react-bootstrap';
-import { DatePicker, Space, ConfigProvider } from 'antd';
-import locale from 'antd/locale/ko_KR';
+import { DatePicker } from 'antd';
+import dayjs from 'dayjs';
+import 'dayjs/locale/ko';
+import locale from 'antd/es/date-picker/locale/ko_KR';
+
+dayjs.locale('ko');
 
 const sendData = [
   { label: '이메일로 수신' },
@@ -17,9 +21,9 @@ const MassageManager = () => {
         title="알림 및 메세지"
         desc="알림 및 메세지를 발송하는 페이지 입니다."
       />
-      <ConfigProvider locale={locale}>
-        <DatePicker />
-      </ConfigProvider>
+      <div>
+        <DatePicker locale={locale} />
+      </div>
 
       <div style={{ paddingTop: 30 }}>
         {sendData.map((item) => (
